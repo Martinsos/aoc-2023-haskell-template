@@ -4,7 +4,11 @@ This is a template project for solving Advent Of Code (2023) in Haskell: fork it
 
 ## Setup
 
+You are expected to have `ghcup` installed on your machine.
+
 Run `./ghcup-set.sh` to set the intended version of GHC, cabal and HLS via GHCup.
+
+If any of the versions needed are not yet installed on your machine, you can use `ghcup tui` to install them.
 
 It might work with other combination of versions also, but this combo works for sure.
 
