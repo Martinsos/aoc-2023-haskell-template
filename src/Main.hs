@@ -10,6 +10,4 @@ main = do
   case args of
     "1" : _ -> day01
     "2" : _ -> day02
-    _ -> defaultProblem
-  where
-    defaultProblem = day02
+    _ -> error "None or invalid day number provided."

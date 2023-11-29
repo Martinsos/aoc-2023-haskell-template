@@ -1,0 +1,3 @@
+#!/bin/sh
+
+cabal run -v0 aoc2023 -- "$1"

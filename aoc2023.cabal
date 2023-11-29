@@ -7,18 +7,35 @@ data-dir: data
 extra-source-files: CHANGELOG.md
 
 executable aoc2023
-    main-is:          Main.hs
-    hs-source-dirs:   src
-    default-language: Haskell2010
+  main-is:          Main.hs
+  hs-source-dirs:   src
+  default-language: Haskell2010
 
-    -- LANGUAGE extensions used by modules in this package.
-    -- other-extensions:
+  ghc-options:
+    -Wall
 
-    -- Modules included in this executable, other than Main.
-    other-modules:
-      Day01
-      Day02
-      Paths_aoc2023
+  default-extensions:
+    OverloadedStrings
+    -- LambdaCase
+    -- ScopedTypeVariables
+    -- DisambiguateRecordFields
 
-    build-depends:
+  -- Modules included in this executable, other than Main.
+  other-modules:
+    Paths_aoc2023
+    Day01
+    Day02
+
+  autogen-modules:
+    Paths_aoc2023
+
+  build-depends:
       base ^>=4.17.2.0
+    -- -- Package `split`: Functions for splitting lists.
+    -- , split ^>=0.2.4
+    -- -- Package `containers`: Brings maps, sets, trees, graphs, sequences.
+    -- , containers ^>=0.7
+    -- -- Package `vector`: Performant, fixed length arrays.
+    -- , vector ^>=0.13.1.0
+    -- -- Package `mtl`: Monad classes for transformers.
+    -- , mtl ^>=2.3.1
