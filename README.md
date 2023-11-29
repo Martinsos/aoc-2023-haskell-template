@@ -20,8 +20,9 @@ If all is good, `cabal build` should complete successfully for you.
 for that specific day, and they are all imported into the `src/Main.hs`, which is the executable
 that we use to easily run the solution for the specific day.
 
-`data/` dir is where input text files go for each day.
+`data/` dir is where puzzle input files go for each day.
 Your code in `src/DayXX.hs` can then read those files as needed.
+These data files are gitignored, since AoC authors ask not to publicly post your puzzle input files.
 
 ## Running
 
