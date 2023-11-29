@@ -51,3 +51,7 @@ This is a cabal-based project.
 You will notice it also contains some commented-out extensions and dependencies(packages). These are
 some common extensions and dependencies that we think you are likely to need so we put them there
 for your convenience, you just need to uncomment them in order to get going with them.
+
+## Other templates
+
+1. Nice, a bit heavier/richer AoC template (Stack based) that I took some nice ideas from: https://github.com/samcoy3/advent-of-code-template .
