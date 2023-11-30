@@ -2,7 +2,7 @@
 
 This is a template project for solving Advent Of Code (2023) in Haskell: fork it and you can start solving!
 
-## Setup
+## Setup with GHCUp
 
 You are expected to have `ghcup` installed on your machine.
 
@@ -13,6 +13,16 @@ If any of the versions needed are not yet installed on your machine, you can use
 It might work with other combination of versions also, but this combo works for sure.
 
 If all is good, `cabal build` should complete successfully for you.
+
+## Setup with Nix
+
+You can run `nix-shell` to get a shell with the intended version of GHC, cabal and HLS. They'll be downloaded if you don't have them already and they won't interfere with any other installation on your system.
+
+You can run commands or your usual editor from that shell or you can use a `direnv` plugin.
+
+If all is good, `cabal build` should complete successfully for you.
+
+If you want to use additional packages, you should add them both to `aoc2023.cabal` (cf. Project config) and `shell.nix`.
 
 ## Organization of the codebase
 
