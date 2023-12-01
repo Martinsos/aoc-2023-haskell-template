@@ -28,7 +28,8 @@ These data files are gitignored, since AoC authors ask not to publicly post your
 
 ## Running
 
-Easiest way is calling `./day <num>` to run specific day, e.g. `./day 1`.
+Easiest way is calling `./day <num>` to run specific day, e.g. `./day 1`. You can also run a
+specific part of one day, e.g. `./day 2 1`.
 
 `day` is really just a helper script for calling `cabal run`, so you can use `cabal run` directly if
 you want more control. `cabal run` will build all your code (same as `cabal build`) and then run the
@@ -44,7 +45,7 @@ the code.
 When solving a new Day, lets say Day 17, there are a couple of things you need to set up:
 1. Create a new file: `src/Day17.hs`. Inside it, make sure to update its module name to `Day17`.
 2. Add this module to `aoc2023.cabal` file, under `other-modules`, as `Day17`.
-3. Add corresponding input text file to `data/` if needed, e.g. `data/day17-input.txt`.
+3. Add corresponding input text file to `data/` if needed, e.g. `data/day17-input.txt` or `data/day17-1-input.txt`.
 4. In `src/Main.hs`, import `Day17` and add it to the code.
 
 ## Project config
