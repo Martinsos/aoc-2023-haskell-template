@@ -1,28 +1,20 @@
 # AOC 2023
 
-This is a template project for solving Advent Of Code (2023) in Haskell: fork it and you can start solving!
+This is a template project for solving Advent Of Code (2023) in Haskell with Nix: fork it and you
+can start solving!
 
-## Setup with GHCUp
+## Setup
 
-You are expected to have `ghcup` installed on your machine.
-
-Run `./ghcup-set.sh` to set the intended version of GHC, cabal and HLS via GHCup.
-
-If any of the versions needed are not yet installed on your machine, you can use `ghcup tui` to install them.
-
-It might work with other combination of versions also, but this combo works for sure.
-
-If all is good, `cabal build` should complete successfully for you.
-
-## Setup with Nix
-
-You can run `nix-shell` to get a shell with the intended version of GHC, cabal and HLS. They'll be downloaded if you don't have them already and they won't interfere with any other installation on your system.
+You can run `nix-shell` to get a shell with the intended version of GHC, cabal and HLS. They'll be
+downloaded if you don't have them already and they won't interfere with any other installation on
+your system.
 
 You can run commands or your usual editor from that shell or you can use a `direnv` plugin.
 
 If all is good, `cabal build` should complete successfully for you.
 
-If you want to use additional packages, you should add them both to `aoc2023.cabal` (cf. Project config) and `shell.nix`.
+If you want to use additional packages, you should add them both to `aoc2023.cabal` (cf. Project
+config) and `shell.nix`.
 
 ## Organization of the codebase
 
@@ -38,7 +30,9 @@ These data files are gitignored, since AoC authors ask not to publicly post your
 
 Easiest way is calling `./day <num>` to run specific day, e.g. `./day 1`.
 
-`day` is really just a helper script for calling `cabal run`, so you can use `cabal run` directly if you want more control. `cabal run` will build all your code (same as `cabal build`) and then run the executable which has `src/Main.hs` as its entry point.
+`day` is really just a helper script for calling `cabal run`, so you can use `cabal run` directly if
+you want more control. `cabal run` will build all your code (same as `cabal build`) and then run the
+executable which has `src/Main.hs` as its entry point.
 
 `cabal repl` is also interesting option: it will take you to ghci where all the modules are already
 loaded for you and you can easily run any function, this is great for debugging and testing, or even
@@ -61,8 +55,10 @@ This is a cabal-based project.
 
 You will notice it also contains some commented-out extensions and dependencies(packages). These are
 some common extensions and dependencies that we think you are likely to need so we put them there
-for your convenience, you just need to uncomment them in order to get going with them.
+for your convenience, you just need to uncomment them both in `aoc2023.cabal` and `shell.nix` in
+order to get going with them.
 
 ## Other templates
 
+1. The base of this one, but using GHCUp instead of Nix: https://github.com/Martinsos/aoc-2023-haskell-template
 1. Nice, a bit heavier/richer AoC template (Stack based) that I took some nice ideas from: https://github.com/samcoy3/advent-of-code-template .
