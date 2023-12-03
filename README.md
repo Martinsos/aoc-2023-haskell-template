@@ -21,12 +21,13 @@ for that specific day, and they are all imported into the `src/Main.hs`, which i
 that we use to easily run the solution for the specific day.
 
 `data/` dir is where puzzle input files go for each day.
+Each day, you should save a new file there, named `dayXY-input.txt` where `XY` is day number (`01`, `25`, ...).
 Your code in `src/DayXX.hs` can then read those files as needed.
 These data files are gitignored, since AoC authors ask not to publicly post your puzzle input files.
 
 ## Running
 
-Easiest way is calling `./day <num>` to run specific day, e.g. `./day 1`.
+Easiest way is calling `./day <num>` to run specific day, e.g. `./day 01` or `./day 25`.
 
 `day` is really just a helper script for calling `cabal run`, so you can use `cabal run` directly if you want more control. `cabal run` will build all your code (same as `cabal build`) and then run the executable which has `src/Main.hs` as its entry point.
 
@@ -34,14 +35,6 @@ Easiest way is calling `./day <num>` to run specific day, e.g. `./day 1`.
 loaded for you and you can easily run any function, this is great for debugging and testing, or even
 normal running. You can just type `day01` and run it that way. Type `:r` to reload upon changes in
 the code.
-
-## Adding new Day
-
-When solving a new Day, lets say Day 17, there are a couple of things you need to set up:
-1. Create a new file: `src/Day17.hs`. Inside it, make sure to update its module name to `Day17`.
-2. Add this module to `aoc2023.cabal` file, under `other-modules`, as `Day17`.
-3. Add corresponding input text file to `data/` if needed, e.g. `data/day17-input.txt`.
-4. In `src/Main.hs`, import `Day17` and add it to the code.
 
 ## Project config
 
